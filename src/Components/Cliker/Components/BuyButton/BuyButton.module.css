@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin:auto;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 300px;
+    height: 500px;
+    border-radius: 25px;
+    background: rgb(108, 99, 255);
+}
+
+.img{
+    width: 188px;
+    border-radius: 25px;
+}
+
+.name{
+    font-size: 20px;
+    width: 200px;
+}
+
+.discription{
+    width: 200px;
+}
+
+.btn {
+    border-radius: 5px;
+    border: none;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    width: 227px;
+    height: 75px;
+    border-radius: 25px;
+    font-size: 18px;
+}
+
+.btn:hover {
+    outline: 2px solid rgb(255, 255, 255);
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+
+.btn:focus {
+    outline: 2px solid rgb(255, 255, 255);
+    transition: all 0.5s ease-out;
+}

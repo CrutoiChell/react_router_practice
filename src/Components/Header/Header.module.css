@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    margin-top: 20px;
+    gap: 30px;
+}
+
+.link {
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+.linkdark {
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.logo {
+    margin-bottom: 100px;
+    animation: rotation 5s infinite linear;
+}
+
+.theme {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

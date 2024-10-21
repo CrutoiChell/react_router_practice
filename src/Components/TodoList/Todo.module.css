@@ -1,0 +1,31 @@
+body {
+    max-width: 1100px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.white {
+    color: #252525;
+}
+
+.dark {
+    color: rgb(226, 226, 226);
+}
+
+.container {
+    margin-top: 100px;
+}
+
+.back {
+    border-radius: 5px;
+    background: rgb(108, 99, 255);
+    min-width: 50px;
+    text-decoration: none;
+    color: white;
+    border: none;
+    font-size: 18px;
+}
