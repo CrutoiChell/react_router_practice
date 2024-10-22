@@ -1,21 +1,18 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLoaderData } from 'react-router-dom';
 import s from './App.module.css'
 import { Header } from './Components/Header/Header';
 import { useState } from 'react';
-import { createContext } from 'react';
-let nowtheme;
 
-if (localStorage.getItem('theme')) {
-  nowtheme = JSON.parse(localStorage.getItem('theme'))
-} else {
-  nowtheme = false
-}
 
-export const themeContext = createContext(nowtheme);
+export let loader = async () => {
+  let themeStore = JSON.parse(localStorage.getItem('theme')) || false;
+  return themeStore
+};
+
 
 export function App() {
-
-  const [theme, setTheme] = useState(nowtheme)
+  const themeStore = useLoaderData()
+  const [theme, setTheme] = useState(themeStore)
 
   if (theme == false) {
     document.body.style.backgroundColor = 'rgb(226, 226, 226)';
@@ -36,7 +33,7 @@ export function App() {
         theme={theme}
         setTheme={setTheme}
       />
-      <Outlet />
+      <Outlet context={ theme} />
     </main>
   )
 }

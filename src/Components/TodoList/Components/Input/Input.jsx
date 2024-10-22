@@ -1,6 +1,5 @@
 import s from './Input.module.css'
 export function Input({ list, setList, handleAdd, theme }) {
-    console.log(theme);
     
     return (
         <div className={s.container}>

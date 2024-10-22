@@ -1,35 +1,23 @@
-import { useContext, useState } from 'react'
+import { useState } from 'react'
 import s from './Todo.module.css'
 import { randomId } from './helpers/random';
 import { Tasks } from './Components/Tasks/Tasks';
 import { Input } from './Components/Input/Input';
-import { themeContext } from '../../App'
 import { useLoaderData } from 'react-router-dom';
+import { useOutletContext } from 'react-router-dom';
 // localStorage.clear()
 
-let nowtheme;
-
-if (localStorage.getItem('theme')) {
-  nowtheme = JSON.parse(localStorage.getItem('theme'))
-} else {
-  nowtheme = false
-}
-
-
 export let loader = async () => {
-  let arr = JSON.parse(localStorage.getItem('arr'))
-  if (arr) {
-      return arr
-  } 
-  return []
-}
+  let arrStore = JSON.parse(localStorage.getItem('arr')) || [];
+  return arrStore
+};
+
 
 export function Todo() {
-  let arr2 = useLoaderData()
+  const arrStore = useLoaderData();
   const [list, setList] = useState('');
-  const [arr, setArr] = useState(arr2)
-  // const theme = useContext(themeContext)
-  const [theme,setTheme] = useState(nowtheme)
+  const [arr, setArr] = useState(arrStore)
+  const theme = useOutletContext();
 
   function handleAdd() {
     if (list.trim()) {
@@ -87,7 +75,7 @@ export function Todo() {
 
   return (
     <>
-      <main className={s.container}>
+      <section className={s.container}>
         <div>
           <h1 className={theme ? s.dark : s.white}>TODO LIST</h1>
         </div>
@@ -105,7 +93,7 @@ export function Todo() {
           handleTogleCheck={handleTogleCheck}
           theme={theme}
         />
-      </main>
+      </section>
     </>
   )
 }
