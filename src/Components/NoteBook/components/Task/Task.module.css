@@ -26,19 +26,17 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
-    margin-left: 230px;
+    margin: 0px 0px 10px 230px;
 }
 
-.btnTrash {
-    composes: btn;
-}
-
-.btnTrash:hover svg path {
+.btn:hover svg path {
     stroke: red;
 }
 
 .left {
-    margin-top: 50px;
+    margin: 0;
+    padding: 50px 48px 15px 48px;
+    border-radius: 25px;
 }
 
 .text {

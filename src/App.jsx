@@ -28,13 +28,13 @@ export function App() {
 
 
   return (
-    <main className={s.container}>
+    <section className={s.container}>
       <Header
         theme={theme}
         setTheme={setTheme}
       />
-      <Outlet context={ theme} />
-    </main>
+      <Outlet context={theme} />
+    </section>
   )
 }
 

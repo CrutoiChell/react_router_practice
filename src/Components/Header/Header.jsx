@@ -11,8 +11,7 @@ export function Header({theme,setTheme}) {
 
     const links = [
         { id: 1, text: 'TODO LIST', url: 'Todolist' },
-        { id: 2, text: 'NOTEBOOK', url: 'Notebook' },
-        { id: 3, text: 'CLICKER', url: 'Clicker' },
+        { id: 2, text: 'NOTEBOOK', url: 'Notebook' }
       ];
 
     return (

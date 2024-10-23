@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import s from './Notebook.module.css'
-import { randomId } from './helpers/random';
+import { randomId } from '../../helpers/random'
 import { Tasks } from './components/Tasks/Tasks';
 import { Input } from './components/Input/input';
 import { useLoaderData, useOutletContext } from 'react-router-dom';
@@ -42,8 +42,8 @@ export function Notebook() {
   }
 
   function saveShow() {
-    let res = show
-    setShow(!res)
+    let res = !show
+    setShow(res)
     let str = JSON.stringify(res)
     localStorage.setItem('show', str)
   }

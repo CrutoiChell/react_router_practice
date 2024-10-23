@@ -7,10 +7,10 @@ export function Task({ item, handleEdit, handleDelite, theme }) {
 
   return (
     <div className={`${s.container} ${theme ? s.themeDark : s.themeWhite}`} key={item.id}>
-      <div className={s.left}>
+      <div onClick={() => handleEdit(item)}  className={s.left}>
         <p className={theme ? s.textDark : s.text}>{item.text}</p>
       </div>
-      <button className={s.btnTrash} onClick={() => handleDelite(item)}>
+      <button className={s.btn} onClick={() => handleDelite(item)}>
         <svg width="18.000000" height="18.000000" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
           <desc>
             Created with Pixso.
@@ -29,9 +29,6 @@ export function Task({ item, handleEdit, handleDelite, theme }) {
             <path id="Vector" d="M7.5 9L7.5 12.75" stroke="#CDCDCD" strokeOpacity="1.000000" strokeWidth="1.000000" strokeLinecap="round" />
           </g>
         </svg>
-      </button>
-      <button onClick={() => handleEdit(item)}>
-        edit
       </button>
     </div>
   )

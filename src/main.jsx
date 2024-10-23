@@ -6,7 +6,6 @@ import { App, loader as mainLoader } from './App.jsx'
 import { Todo, loader as TodoLoader } from './Components/TodoList/Todo';
 import { ErrorPage404 } from './Components/ErrorPage404/ErrorPage404.jsx';
 import { Notebook, loader as NoteBookLoader } from './Components/NoteBook/Notebook.jsx';
-import { Clicker } from './Components/Cliker/Clicker.jsx';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -23,10 +22,6 @@ const router = createBrowserRouter([
         path: '/Notebook',
         element: <Notebook />,
         loader: NoteBookLoader,
-      },
-      {
-        path: '/Clicker',
-        element: <Clicker />
       }
     ]
   }

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import s from './Todo.module.css'
-import { randomId } from './helpers/random';
+import { randomId } from '../../helpers/random'
 import { Tasks } from './Components/Tasks/Tasks';
 import { Input } from './Components/Input/Input';
 import { useLoaderData } from 'react-router-dom';
